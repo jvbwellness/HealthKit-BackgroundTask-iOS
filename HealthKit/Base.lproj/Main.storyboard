@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,98 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gJt-vv-1jk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAa-g7-K0d">
+                                <rect key="frame" x="5" y="150" width="110" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD-MM-YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z8b-G5-yxV">
+                                <rect key="frame" x="124" y="145.5" width="180" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Your Email Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BsR-VX-alK">
+                                <rect key="frame" x="75" y="284" width="259" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0u-Jz-LK8">
+                                <rect key="frame" x="110" y="321.5" width="199" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Send Health Data">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendGmailBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MSq-GQ-i6p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2t-Dg-Ui5">
+                                <rect key="frame" x="99" y="196" width="59" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="QGb-6P-FiU"/>
+                                    <constraint firstAttribute="height" constant="30" id="le8-O9-uD3"/>
+                                </constraints>
+                                <state key="normal" title="One Day"/>
+                                <connections>
+                                    <action selector="oneDayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="isa-Td-8Du"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nn-jD-78P">
+                                <rect key="frame" x="193" y="196" width="90" height="30"/>
+                                <state key="normal" title="One Week"/>
+                                <connections>
+                                    <action selector="oneWeekAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBB-DB-q81"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="PAa-g7-K0d" firstAttribute="top" secondItem="iMh-sS-Gpc" secondAttribute="top" constant="130" id="7o0-2h-lDS"/>
+                            <constraint firstItem="BsR-VX-alK" firstAttribute="centerX" secondItem="Z8b-G5-yxV" secondAttribute="centerX" constant="-9.5" id="9ww-dx-uoC"/>
+                            <constraint firstItem="q2t-Dg-Ui5" firstAttribute="height" secondItem="5nn-jD-78P" secondAttribute="height" id="AHX-03-Pkq"/>
+                            <constraint firstItem="PAa-g7-K0d" firstAttribute="width" secondItem="gJt-vv-1jk" secondAttribute="width" multiplier="110:375" id="Cga-vU-XxS"/>
+                            <constraint firstItem="Z8b-G5-yxV" firstAttribute="centerY" secondItem="PAa-g7-K0d" secondAttribute="centerY" id="Deh-EY-psn"/>
+                            <constraint firstItem="BsR-VX-alK" firstAttribute="top" secondItem="Z8b-G5-yxV" secondAttribute="bottom" constant="108.5" id="Ex8-VY-SS7"/>
+                            <constraint firstItem="PAa-g7-K0d" firstAttribute="leading" secondItem="iMh-sS-Gpc" secondAttribute="leading" constant="5" id="JOY-K4-jaY"/>
+                            <constraint firstItem="q2t-Dg-Ui5" firstAttribute="top" secondItem="5nn-jD-78P" secondAttribute="top" id="JdO-bf-NZ3"/>
+                            <constraint firstItem="Z8b-G5-yxV" firstAttribute="width" secondItem="gJt-vv-1jk" secondAttribute="width" multiplier="167:375" constant="13" id="NaZ-fP-C8t"/>
+                            <constraint firstItem="5nn-jD-78P" firstAttribute="leading" secondItem="q2t-Dg-Ui5" secondAttribute="trailing" constant="35" id="Qd3-Ce-2j3"/>
+                            <constraint firstItem="N0u-Jz-LK8" firstAttribute="top" secondItem="BsR-VX-alK" secondAttribute="bottom" constant="7.5" id="Tfv-vy-Itz"/>
+                            <constraint firstItem="q2t-Dg-Ui5" firstAttribute="leading" secondItem="iMh-sS-Gpc" secondAttribute="leading" constant="99" id="Xbw-XQ-cdp"/>
+                            <constraint firstItem="q2t-Dg-Ui5" firstAttribute="top" secondItem="Z8b-G5-yxV" secondAttribute="bottom" constant="20.5" id="ebr-Cy-mDH"/>
+                            <constraint firstItem="BsR-VX-alK" firstAttribute="width" secondItem="gJt-vv-1jk" secondAttribute="width" multiplier="259:375" id="fkv-L5-hCM"/>
+                            <constraint firstItem="N0u-Jz-LK8" firstAttribute="centerX" secondItem="BsR-VX-alK" secondAttribute="centerX" constant="5" id="gr5-9g-2oa"/>
+                            <constraint firstItem="N0u-Jz-LK8" firstAttribute="height" secondItem="gJt-vv-1jk" secondAttribute="height" multiplier="30:667" id="hJW-I7-C9D"/>
+                            <constraint firstItem="Z8b-G5-yxV" firstAttribute="height" secondItem="gJt-vv-1jk" secondAttribute="height" multiplier="30:667" id="jUn-Wt-wAm"/>
+                            <constraint firstItem="BsR-VX-alK" firstAttribute="height" secondItem="gJt-vv-1jk" secondAttribute="height" multiplier="30:667" id="lYw-DX-Ymv"/>
+                            <constraint firstItem="N0u-Jz-LK8" firstAttribute="width" secondItem="gJt-vv-1jk" secondAttribute="width" multiplier="199:375" id="nfh-x7-VzF"/>
+                            <constraint firstItem="Z8b-G5-yxV" firstAttribute="leading" secondItem="PAa-g7-K0d" secondAttribute="trailing" constant="9" id="plm-oG-ZfU"/>
+                            <constraint firstItem="PAa-g7-K0d" firstAttribute="height" secondItem="gJt-vv-1jk" secondAttribute="height" multiplier="21:667" id="uHy-xn-3Zi"/>
+                            <constraint firstItem="q2t-Dg-Ui5" firstAttribute="width" secondItem="5nn-jD-78P" secondAttribute="width" constant="-31" id="vO3-r3-yE0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iMh-sS-Gpc"/>
                     </view>
+                    <connections>
+                        <outlet property="dateTxt" destination="Z8b-G5-yxV" id="tDM-O9-AG4"/>
+                        <outlet property="enterGmailIdTXT" destination="BsR-VX-alK" id="at5-zN-MAA"/>
+                        <outlet property="sendHealthDateBtn" destination="N0u-Jz-LK8" id="EBP-Zw-J5y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

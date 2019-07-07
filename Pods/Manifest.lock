@@ -1,0 +1,20 @@
+PODS:
+  - Granola (0.4.1):
+    - ObjectiveSugar (~> 1.1)
+  - ObjectiveSugar (1.1.0)
+
+DEPENDENCIES:
+  - Granola
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Granola
+    - ObjectiveSugar
+
+SPEC CHECKSUMS:
+  Granola: 07d8cc4bdf005228118161eb182cd34eaf169a03
+  ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
+
+PODFILE CHECKSUM: 09ba3127886e6b195daca30874ac58b99523a0ef
+
+COCOAPODS: 1.5.3
